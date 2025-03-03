@@ -19,10 +19,12 @@ public class Library {
     }
 
     public void listBooks() {
+        int totalCopies = 0;
         for (Book book : books) {
             book.displayInfo();
             System.out.println("Kirjan kategoria: " + book.categorize());
+            totalCopies += book.copies;
         }
-        System.out.println("Kirjojen määrä kirjastossa on: " + books.size());
+        System.out.println("Kirjojen määrä kirjastossa on: " + totalCopies);
     }
 }
